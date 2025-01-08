@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="index.css">
+    <title>JC-airlines</title>
+</head>
+
+<body>
+
+    <header>
+        <div>   
+            <button class="burger-btn" onclick="openNav()">
+                <img src="/images/menuburger.png" class="menuburger">
+            </button>
+        </div>
+        <img src="/images/login.png" id="login" class="login">
+        <h1>JC-Airlines</h1>
+    </header>
+
+    <div id="JCsidenav" class="sidenav">
+        <div>
+            <button class="close-btn" onclick="closeNav()">
+                <img class="closenav" src="/images/cross.png">
+            </button>
+        </div>
+        <a style="margin-top: 70px;" href="#" onclick="home()">Home</a>
+        <a href="#" onclick="destinations()">Destinations</a>
+        <a href="#" onclick="help()">help</a> 
+    </div>
+
+    <h2 class="destinations-h2">Destinations</h2>
+    <div class="flex-div">
+        <div class="destination">
+            <img src="/images/cityscapeplaceholder.jpg" alt="city" class="cityimg">
+            <div class="price-n-stuf">
+                <p>City</p>
+                <p>starting at (price)€</p>
+            </div>
+        </div>
+        <div class="destination">
+            <img src="/images/cityscapeplaceholder.jpg" alt="city" class="cityimg">
+            <div class="price-n-stuf">
+                <p>City</p>
+                <p>starting at (price)€</p>
+            </div>
+        </div>
+        <div class="destination">
+            <img src="/images/cityscapeplaceholder.jpg" alt="city" class="cityimg">
+            <div class="price-n-stuf">
+                <p>City</p>
+                <p>starting at (price)€</p>
+            </div>
+        </div>
+        <div class="destination">
+            <img src="/images/cityscapeplaceholder.jpg" alt="city" class="cityimg">
+            <div class="price-n-stuf">
+                <p>City</p>
+                <p>starting at (price)€</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="flex-div">
+            <div class="flex-div2">
+                <h3 class="footer1">How to contact us</h3>
+                <p class="footer2">+358 0000 000</p>
+                <p class="footer2">jc.airlines@planesgonyoom.com</p>
+                <p class="footer2">Tikkakoski, Finland</p>
+            </div>
+            <div class="flex-div2">
+                <h3 class="footer1">Missed a flight?</h3>
+                <p class="footer2">wake up earlier next time man.</p>
+                <h3 class="footer1">Missing belongings?</h3>
+                <p class="footer2">uh, womp womp</p>
+            </div>
+
+        </div>
+        <p class="footer-C">© 2025 JC-airlines</p>
+    </footer>
+
+    <script src="index.js"></script>
+
+
+
+</body>
+</html>

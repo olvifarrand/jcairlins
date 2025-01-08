@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="index.css">
+    <title>JC-airlines</title>
+</head>
+
+<body>
+
+    <header>
+        <div>   
+            <button class="burger-btn" onclick="openNav()">
+                <img src="/images/menuburger.png" class="menuburger">
+            </button>
+        </div>
+        <img src="/images/login.png" id="login" class="login">
+        <h1>JC-Airlines</h1>
+    </header>
+
+    <div id="JCsidenav" class="sidenav">
+        <div>
+            <button class="close-btn" onclick="closeNav()">
+                <img class="closenav" src="/images/cross.png">
+            </button>
+        </div>
+        <a style="margin-top: 70px;" href="#" onclick="home()">Home</a>
+        <a href="#" onclick="destinations()">Destinations</a>
+        <a href="#" onclick="help()">help</a> 
+    </div>
+
+    <form method="post">
+        <div class="selection-div">
+            <div class="flex-div">
+                <img src="/images/location.png" class="time-n-place">
+                <select name="departure" class="selection-lil-div">
+                    <option value="lähtö-kaupunki">Kaupunki</option>
+                    <option value="tikkakoski">Tikkakoski</option>
+                </select>
+                <img src="/images/arrow.png" class="arrow">
+                <select class="selection-lil-div">
+                    <option name="destination" value="meno-kaupunki">Kaupunki</option>
+                </select>
+                <select name="class" class="selection-lil-div">
+                    <option>Choose class</option>
+                    <option value="economy">Economy</option>
+                    <option value="premium-economy">Premium economy</option>
+                    <option value="business-class">Business class</option>
+                    <option value="first-class">First class</option>
+                </select>
+            </div>
+            <div class="flex-div">
+                <img src="/images/calendar.png" class="time-n-place">
+                <div name="dept-time" class="date-div">
+                    <input type="date" id="meno-aika">
+                </div>
+                <div name="dest-time" class="date-div">
+                    <input type="date" id="paluu-aika">
+                </div>
+                <select class="selection-lil-div">
+                    <option>Aika</option>
+                    <option value="morning">Aamu</option>
+                    <option value="day">Päivä</option>
+                    <option value="evening">Ilta</option>
+                </select>
+                <select class="selection-lil-div">
+                    <option value="lento-tyyppi">Meno</option>
+                    <option>Et pääse takas</option>
+                </select>
+            </div>
+            <input onclick="confirm()" id="confirmflight" type="submit" value="Confirm-flight"> 
+        </div>
+    </form>
+    <div class="flex-div">
+        <div class="flight-div-l">
+            <h2 class="flight-h2">Flight details</h2>
+            <div class="flex-div">
+                <p name="">rawr</p>
+                <p>death</p>
+            </div>
+            <div class="flex-div">  
+                <p>Passangers:</p>
+                <input class="flight-lil-div" type="number" name="passengers">
+            </div>
+            <div class="flex-div">
+                <input class="flight-lil-div" type="" name="" value="">
+            </div>
+        </div>
+        <div class="flight-div-r">
+            <h2 class="flight-h2">Payment</h2>
+            <div class="flex-div">
+                <input class="flight-lil-div" type="text" name="name" value="Name">
+                <input class="flight-lil-div" type="email" name="email" value="Email"> 
+            </div>
+            <p name="price"></p>
+            <input class="pay-button" type="submit" name="pay" value="Pay">
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="flex-div">
+            <div class="flex-div2">
+                <h3 class="footer1">How to contact us</h3>
+                <p class="footer2">+358 0000 000</p>
+                <p class="footer2">jc.airlines@planesgonyoom.com</p>
+                <p class="footer2">Tikkakoski, Finland</p>
+            </div>
+            <div class="flex-div2">
+                <h3 class="footer1">Missed a flight?</h3>
+                <p class="footer2">wake up earlier next time man.</p>
+                <h3 class="footer1">Missing belongings?</h3>
+                <p class="footer2">uh, womp womp</p>
+            </div>
+
+        </div>
+        <p class="footer-C">© 2025 JC-airlines</p>
+    </footer>
+
+    <script src="index.js"></script>
+
+</body>
+</html>
