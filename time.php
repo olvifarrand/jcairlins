@@ -10,17 +10,17 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$query = "SELECT DISTINCT Kohdemaa FROM lennot ORDER BY Kohdemaa";
+$query = "SELECT DISTINCT Aika FROM lennot ORDER BY Aika";
 $stmt = $conn->prepare($query);
 $stmt->execute();
 $result = $stmt->get_result();
 
-$countries = [];
+$time = [];
 while ($row = $result->fetch_assoc()) {
-    $countries[] = $row['Kohdemaa'];
+    $time[] = $row['Aika'];
 }
 
-echo json_encode($countries);
+echo json_encode($time);
 
 $conn->close();
 

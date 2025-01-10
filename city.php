@@ -10,17 +10,17 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$query = "SELECT DISTINCT Kohdemaa FROM lennot ORDER BY Kohdemaa";
+$query = "SELECT DISTINCT Kaupunki FROM lennot ORDER BY Kaupunki";
 $stmt = $conn->prepare($query);
 $stmt->execute();
 $result = $stmt->get_result();
 
-$countries = [];
+$city = [];
 while ($row = $result->fetch_assoc()) {
-    $countries[] = $row['Kohdemaa'];
+    $city[] = $row['Kaupunki'];
 }
 
-echo json_encode($countries);
+echo json_encode($city);
 
 $conn->close();
 

@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", function() {
             if (!response.ok) throw new Error("Network response was not alr man");
             return response.json();
         })
-        .then(() => {
-            countries.foreach((country) => {
+        .then((countries) => {
+            countries.forEach((country) => {
                 const option = document.createElement("option");
                 option.value = country;
                 option.textContent = country;
@@ -16,6 +16,44 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         })
         .catch((err) => console.error("Error fetching countries:", err));
+})
+document.addEventListener("DOMContentLoaded", function() {
+    const timeSelect = document.getElementById("timeSelect");
+
+
+    fetch("time.php")
+        .then((response) => {
+            if (!response.ok) throw new Error("Network response was not alr man");
+            return response.json();
+        })
+        .then((times) => {
+            times.forEach((time) => {
+                const option = document.createElement("option");
+                option.value = time;
+                option.textContent = time;
+                timeSelect.appendChild(option);
+            });
+        })
+        .catch((err) => console.error("Error fetching times:", err));
+})
+document.addEventListener("DOMContentLoaded", function() {
+    const citySelect = document.getElementById("citySelect");
+
+
+    fetch("city.php")
+        .then((response) => {
+            if (!response.ok) throw new Error("Network response was not alr man");
+            return response.json();
+        })
+        .then((cities) => {
+            cities.forEach((city) => {
+                const option = document.createElement("option");
+                option.value = city;
+                option.textContent = city;
+                citySelect.appendChild(option);
+            });
+        })
+        .catch((err) => console.error("Error fetching times:", err));
 })
 
 function openNav() {
@@ -36,5 +74,5 @@ function help() {
 }
 
 function confirm() {
-    document.getElementById("confirmflight").style.visibility = "visible";
+    alert("Cool, you did that"); ;
 }
